@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hacker University | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Hacker University</h1>
+     <nav class="main-nav">
+  <ul class="navbar">
+    <li><a class="nav-btn" href="index.html">Home</a></li>
+    <li><a class="nav-btn" href="about.html">About</a></li>
+    <li><a class="nav-btn" href="courses.html">Courses</a></li>
+    <li><a class="nav-btn" href="admission.html">Admission</a></li>
+    <li><a class="nav-btn" href="faculty.html">Faculty</a></li>
+    <li><a class="nav-btn" href="gallery.html">Gallery</a></li>
+    <li><a class="nav-btn" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+    </div>
+  </header>
+
+  
+
+    <!-- Hero Section or Image Section -->
+<section class="hero">
+  <h2>Welcome to Hacker University</h2>
+  <p>Empowering the future through innovation and excellence in education.</p>
+<p>Inspiring minds to shape a better tomorrow.</p>
+
+  <!-- This is the image that will open in popup -->
+  <div class="image-preview-container">
+    <img src="images/campus.jpg" alt="Campus" class="popup-img" />
+  </div>
+</section>
+
+
+
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hacker University</p>
+  </footer>
+  <!-- Lightbox HTML -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="Popup Image" />
+</div>
+<script>
+  const popupImg = document.querySelector(".popup-img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close-btn");
+
+  popupImg.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = popupImg.src;
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
