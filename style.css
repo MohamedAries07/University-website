@@ -414,3 +414,291 @@ footer {
     max-width: 90%;
   }
 }
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #ecf0f1;
+  width: 280px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.contact-card h3 {
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+/* Floating images section */
+.contact-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.contact-float-img {
+  width: 250px;
+  border-radius: 15px;
+  animation: floatImage 6s ease-in-out infinite;
+  border: 2px solid rgba(241, 196, 15, 0.4); /* gold glow border */
+  box-shadow:
+    0 0 15px rgba(241, 196, 15, 0.4),  /* soft gold outer glow */
+    0 10px 25px rgba(0,0,0,0.4);       /* base shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-float-img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow:
+    0 0 25px rgba(241, 196, 15, 0.6),
+    0 15px 30px rgba(0,0,0,0.5);
+}
+
+
+/* Contact form */
+.contact-form {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(255,255,255,0.03);
+  border-radius: 20px;
+  margin: 40px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #f1c40f;
+  border: none;
+  color: #000;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d4ac0d;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #f1c40f;
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.course-images {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.course-float-img {
+  width: 280px;
+  border-radius: 15px;
+  animation: floatImage 6s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(78, 144, 244, 0.4), 0 10px 25px rgba(0,0,0,0.4);
+  border: 2px solid rgba(114, 120, 234, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.course-float-img:hover {
+  transform: scale(1.05) translateY(-6px);
+  box-shadow: 0 0 30px rgba(13, 13, 239, 0.6), 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* Reusable lightbox popup styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #f1c40f;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.map-toggle-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.map-toggle-btn {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatMapButton 5s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map-toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(241, 196, 15, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes floatMapButton {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.map-container {
+  max-width: 90%;
+  margin: 20px auto;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.map-toggle-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.map-toggle-btn {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatMapButton 5s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.5), 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map-toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(241, 196, 15, 0.7), 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.map-wrapper {
+  max-width: 90%;
+  margin: 20px auto;
+  display: none; /* hidden by default */
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes floatMapButton {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
