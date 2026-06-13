@@ -1,5 +1,3 @@
-# University-website
-Its an simple but cool looking website without data base connectivity. so use this for just ur small projects.
 # University Website
 
 > My first internship project — a simple university website built to learn the fundamentals of web development.
